@@ -1,33 +1,23 @@
 import * as React from "react"
-import { Button } from "@/components/ui/button"
 import {
     Card,
     CardContent,
-    CardDescription,
     CardFooter,
     CardHeader,
-    CardTitle,
 } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select"
-import { AlignRight, Star } from "lucide-react"
-import { IProductList } from "@/types/product-types"
+import { Star } from "lucide-react"
+import { IProductList } from "@/types/product-types";
+import Image from 'next/image';
+
 
 export function ProductCard({ item }: { item: IProductList }) {
     return (
         <Card className="w-[350px]">
             <CardHeader>
-                <img src="/amazon-icon.svg" alt="Amazon icon" className="w-6 h-6" />
+                <Image src="/amazon-icon.svg" alt="Amazon icon" width={24} height={24} />
             </CardHeader>
             <CardContent>
-                <img src={item.image} alt="product image" />
+                <Image src={item.image} alt="product image" width={200} height={200} />
             </CardContent>
             <CardFooter className="flex justify-between">
                 <div className="w-full flex flex-col mr-2">

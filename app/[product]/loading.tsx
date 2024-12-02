@@ -5,7 +5,7 @@ export default function loading() {
         <div className="flex flex-wrap justify-center gap-4">
             {
                 Array.from({ length: 10 }, (_, index) => (
-                    <Card className="w-[350px]">
+                    <Card key={index} className="w-[350px]">
                         <CardHeader>
                             <div className="w-6 h-6 bg-gray-200 animate-pulse rounded-md"></div>
                         </CardHeader>
