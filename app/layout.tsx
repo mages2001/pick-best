@@ -3,16 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import SearchBar from "@/components/search-bar";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Get Best Products",
@@ -26,13 +16,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="w-full h-full flex flex-col bg-[#dfd3bb]">
         <header>
           <SearchBar />
         </header>
-        {children}
+        <section className="w-full h-full">
+          {children}
+        </section>
+        <footer>
+
+        </footer>
       </body>
     </html>
   );
